@@ -1,0 +1,53 @@
+body.light-theme {
+  background-color: $colorLightBg;
+  color: $colorLightText;
+
+  transition: all 0.2s linear;
+
+  .hero__item {
+    color: $colorBlack;
+  }
+
+  .hero__form {
+    background-color: $colorLightBgFormHeader;
+
+    input {
+      color: $colorBlack;
+
+      &::placeholder {
+        color: $colorBlack;
+      }
+    }
+  }
+
+  .works {
+    background-color: $colorLightBgSecondary;
+  }
+}
+
+body.dark-theme {
+  background-color: $colorDarkBg;
+  color: $colorDarkText;
+
+  transition: all 0.2s linear;
+
+  .hero__item {
+    color: $colorWhite;
+  }
+
+  .hero__form {
+    background-color: $colorDarkBgFormHeader;
+
+    input {
+      color: $colorWhite;
+
+      &::placeholder {
+        color: $colorWhite;
+      }
+    }
+  }
+
+  .works {
+    background-color: $colorDarkBgSecondary;
+  }
+}

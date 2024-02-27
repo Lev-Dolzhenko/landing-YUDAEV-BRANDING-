@@ -1,69 +1,60 @@
 body {
-    font-family: $travels;
-    // color: ;
-    font-size: 16px;
+  font-family: $travels;
+  // color: ;
+  font-size: 16px;
 }
-
-body.light-theme {
-    background-color: $colorLightBg;
-    color: $colorLightText;
-
-    transition: all 0.2s linear;
-    
-}
-
-body.dark-theme {
-    background-color: $colorDarkBg;
-    color: $colorDarkText;
-
-    transition: all 0.2s linear;
-}
-
-
 
 a {
-    transition: color 0.2s linear;
-    
-    &:hover {
-        // color: $fff;
-    }
+  transition: color 0.2s linear;
+
+  &:hover {
+    // color: $fff;
+  }
 }
 
 .container {
-    max-width: 1380px;
-    padding: 0 30px;
-    margin: 0 auto;
-
+  max-width: 1380px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 .none {
-    display: none !important;
+  display: none !important;
 }
 
-.titleH1 {
-    // font-size: clamp();
-    // font-weight: ;
-    // line-height: ;
+.title1 {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 80%;
+  text-align: center;
+
+  &_hero {
+    span {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      font-weight: 800;
+      font-style: italic;
+      background-image: linear-gradient(rgb(169, 209, 55), rgb(67, 209, 55));
+    }
+  }
 }
 
 .titleH2 {
-    // font-size: clamp();
-    // font-weight: ;
-    // line-height: ;
+  // font-size: clamp();
+  // font-weight: ;
+  // line-height: ;
 }
 
 .titleH3 {
-    // font-size: clamp();
-    // font-weight: ;
-    // line-height: ;
-
+  // font-size: clamp();
+  // font-weight: ;
+  // line-height: ;
 }
 
 .subtitleP {
-    // font-size: clamp();
-    // font-weight: ;
-    // line-height: ;
-
+  // font-size: clamp();
+  // font-weight: ;
+  // line-height: ;
 }
-
-
