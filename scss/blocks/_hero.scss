@@ -69,5 +69,11 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 80%;
+
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }

@@ -66,6 +66,7 @@
   top: -280px;
   transform: scale(0);
   opacity: 0;
+  pointer-events: none;
 
   transition: all 0.3s linear;
 }
@@ -76,6 +77,7 @@
   bottom: 63px;
   transform: scale(0);
   opacity: 0;
+  pointer-events: none;
 
   transition: all 0.3s linear;
 }
@@ -156,7 +158,11 @@
     transform: translate(80%, 60%) rotate(0) scale(1);
     opacity: 1;
   }
-  
+
+  .works__image_main {
+    transform: scale(1.05);
+  }
+
   .works__image_dark-coconutLarge {
     transform: translate(-40%, 44%) rotate(14deg) scale(1);
     opacity: 1;
@@ -174,6 +180,7 @@
 .works__image_dark-coconutLarge {
   transform: translate(-40%, 44%) rotate(0deg) scale(0);
   opacity: 0;
+  pointer-events: none;
 
   transition: all 0.3s linear;
 }

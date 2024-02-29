@@ -23,6 +23,20 @@ body.light-theme {
   .works {
     background-color: $colorLightBgSecondary;
   }
+
+  .benefits {
+    p {
+      color: $colorBlack;
+    }
+  }
+
+  .comments__comment {
+    color: $colorWhite;
+  }
+
+  .footer__span {
+    color: $colorWhite;
+  }
 }
 
 body.dark-theme {
@@ -49,5 +63,19 @@ body.dark-theme {
 
   .works {
     background-color: $colorDarkBgSecondary;
+  }
+
+  .benefits {
+    p {
+      color: $colorWhite;
+    }
+  }
+
+  .comments__comment {
+    color: $colorWhite;
+  }
+
+  .footer__span {
+    color: rgb(36, 36, 36);
   }
 }

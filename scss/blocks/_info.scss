@@ -1,0 +1,38 @@
+.info {
+  position: relative;
+  background-color: $colorWhite;
+  padding: 100px 0 0;
+}
+
+.info__wrapper {
+  padding-bottom: 100px;
+}
+
+.info__name {
+  color: rgb(74, 74, 74);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 154%;
+}
+.info__title {
+  margin: 50px 0;
+}
+.title2 {
+}
+.title2_info {
+}
+.info__subtitle {
+  max-width: 650px;
+}
+.subtitle {
+}
+.subtitle_info {
+}
+
+.info__image-person {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
