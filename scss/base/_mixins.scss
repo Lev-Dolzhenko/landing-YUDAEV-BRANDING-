@@ -1,3 +1,9 @@
+@mixin largeTablet {
+    @media screen and (max-width: $largeTablet) {
+        @content
+    }
+}
+
 @mixin mediaTablet {
     @media screen and (max-width: $tablet) {
         @content
@@ -5,7 +11,7 @@
 }
 
 
-@mixin semiTablet {
+@mixin mediaSemiTablet {
     @media screen and (max-width: $semiTablet) {
         @content
     }

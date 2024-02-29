@@ -90,7 +90,7 @@
   }
 
   .works__image_main {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -183,4 +183,31 @@
   pointer-events: none;
 
   transition: all 0.3s linear;
+}
+
+@include largeTablet {
+  .works__grid {
+    grid-template-columns: unset;
+  }
+
+  .works__card {
+    justify-self: center;
+    max-width: 650px;
+    height: 650px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@include mediaTablet {
+  .works__image_secondary {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .works__card {
+    height: 450px;
+  }
 }
