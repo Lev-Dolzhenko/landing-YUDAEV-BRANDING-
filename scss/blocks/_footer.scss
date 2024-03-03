@@ -6,7 +6,9 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-
+  column-gap: 40px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer__span {
@@ -14,7 +16,7 @@
 
   color: rgb(36, 36, 36);
   font-family: $drukBold;
-  font-size: 80px;
+  font-size: clamp(30px, 0.739rem + 5.68vw, 80px);
   font-weight: 700;
   line-height: 80%;
   z-index: -1;
@@ -29,7 +31,7 @@
   align-items: center;
   column-gap: 40px;
 
-  color: rgb(125, 125, 125);
+  color: #7d7d7d;
   font-size: 14px;
   font-weight: 700;
   line-height: 80%;
@@ -37,4 +39,32 @@
 
 .footer__logotype {
   width: 50px;
+}
+
+.footer__social_icon {
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  .footer__socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+}
+
+@include mediaSemiTablet {
+  .footer__social {
+    display: none;
+  }
+  .footer__social_icon {
+    display: block;
+    img {
+      max-width: 30px;
+    }
+  }
+
+  .footer__socials {
+    display: flex;
+  }
 }

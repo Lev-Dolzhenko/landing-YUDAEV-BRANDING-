@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YUDAEV BRANDING</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="https://unpkg.com/split-type" defer></script>
     <script src="/scripts/script.js" defer></script>
     <link rel="icon" href="/content/favicon/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body class="dark-theme">
-    <header class="header none">
+    <header class="header 1none">
+      <div class="overlay"></div>
       <div class="container">
         <nav class="header__nav">
           <ul class="header__list">
@@ -17,7 +27,7 @@
               <a href="#!"><span>YUDAEV</span> BRANDING</a>
             </li>
             <li class="header__item"></li>
-            <li class="header__item">
+            <li class="header__item header__item_logotype">
               <a href="#!"
                 ><img
                   id="logotypeDark"
@@ -36,7 +46,7 @@
             <li class="header__item header__item_buttons">
               <button
                 id="themeToggleDark"
-                class="header__button header__button_active"
+                class="header__button header__button_active themeToggleDark"
               >
                 <svg
                   width="13.908142"
@@ -77,7 +87,10 @@
                   </g>
                 </svg>
               </button>
-              <button id="themeToggleLight" class="header__button">
+              <button
+                id="themeToggleLight"
+                class="header__button themeToggleLight"
+              >
                 <svg
                   width="11.000000"
                   height="11.000000"
@@ -124,18 +137,123 @@
               </button>
             </li>
             <li class="header__item"></li>
-            <li class="header__item">
+            <li class="header__item header__item_text">
               <a class="header__link" href="#!">WORKS</a>
             </li>
-            <li class="header__item">
+            <li class="header__item header__item_text">
               <a class="header__link" href="#!">CONTACTS</a>
+            </li>
+            <li class="header__item header__item_burger">
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+              </label>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav__mobile">
+          <ul>
+            <li class="header__item-mobile header__item_text-mobile">
+              <a class="header__link-mobile" href="#!">WORKS</a>
+            </li>
+            <li class="header__item-mobile header__item_text-mobile">
+              <a class="header__link-mobile" href="#!">CONTACTS</a>
+            </li>
+            <li class="header__item-mobile header__item_buttons-mobile">
+              <button
+                class="header__button header__button_active themeToggleDark"
+              >
+                <svg
+                  width="13.908142"
+                  height="13.908203"
+                  viewBox="0 0 13.9081 13.9082"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <clipPath id="clip2_38">
+                      <rect
+                        id="ic:baseline-mode-night"
+                        width="10.559068"
+                        height="10.559068"
+                        transform="translate(4.236008 0.000000) rotate(23.651478)"
+                        fill="white"
+                        fill-opacity="0"
+                      />
+                    </clipPath>
+                  </defs>
+                  <rect
+                    id="ic:baseline-mode-night"
+                    width="10.559068"
+                    height="10.559068"
+                    transform="translate(4.236008 0.000000) rotate(23.651478)"
+                    fill="#FFFFFF"
+                    fill-opacity="0"
+                  />
+                  <g clip-path="url(#clip2_38)">
+                    <path
+                      id="Vector"
+                      d="M7.71155 2.48242C6.97807 2.16113 6.20068 2.06104 5.45824 2.14404C6.35788 3.36914 6.59959 5.02148 5.94655 6.5127C5.29349 8.00391 3.91512 8.94678 2.40479 9.11621C2.84718 9.71826 3.44807 10.2217 4.18155 10.5425C6.40613 11.5171 9.00232 10.5024 9.97659 8.27783C10.9509 6.05322 9.93614 3.45703 7.71155 2.48242Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button class="header__button themeToggleLight">
+                <svg
+                  width="11.000000"
+                  height="11.000000"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <clipPath id="clip2_42">
+                      <rect
+                        id="akar-icons:sun-fill"
+                        width="11.000000"
+                        height="11.000000"
+                        fill="white"
+                        fill-opacity="0"
+                      />
+                    </clipPath>
+                  </defs>
+                  <rect
+                    id="akar-icons:sun-fill"
+                    width="11.000000"
+                    height="11.000000"
+                    fill="#FFFFFF"
+                    fill-opacity="0"
+                  />
+                  <g clip-path="url(#clip2_42)">
+                    <path
+                      id="Vector"
+                      d="M5.49998 3.2085C4.8922 3.2085 4.3093 3.44971 3.87953 3.87988C3.44975 4.30957 3.20831 4.89258 3.20831 5.5C3.20831 6.10791 3.44975 6.69092 3.87953 7.12061C4.3093 7.55029 4.8922 7.79199 5.49998 7.79199C6.10777 7.79199 6.69066 7.55029 7.12044 7.12061C7.5502 6.69092 7.79164 6.10791 7.79164 5.5C7.79164 4.89258 7.5502 4.30957 7.12044 3.87988C6.69066 3.44971 6.10777 3.2085 5.49998 3.2085Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Vector"
+                      d="M5.49998 0.458496C5.62154 0.458496 5.73811 0.506836 5.82407 0.592773C5.91002 0.678711 5.95831 0.79541 5.95831 0.916992L5.95831 1.375C5.95831 1.49658 5.91002 1.61328 5.82407 1.69922C5.73811 1.78516 5.62154 1.8335 5.49998 1.8335C5.37842 1.8335 5.26184 1.78516 5.17589 1.69922C5.08994 1.61328 5.04164 1.49658 5.04164 1.375L5.04164 0.916992C5.04164 0.79541 5.08994 0.678711 5.17589 0.592773C5.26184 0.506836 5.37842 0.458496 5.49998 0.458496ZM1.50928 1.50928C1.59521 1.42334 1.71178 1.37549 1.83331 1.37549C1.95485 1.37549 2.07141 1.42334 2.15735 1.50928L2.84485 2.19678C2.92834 2.2832 2.97455 2.39941 2.9735 2.51953C2.97246 2.63965 2.92426 2.75439 2.83926 2.83936C2.75429 2.92432 2.63934 2.97266 2.51917 2.97363C2.39899 2.97461 2.28322 2.92871 2.19678 2.84521L1.50928 2.15771C1.42334 2.07178 1.37508 1.95508 1.37508 1.8335C1.37508 1.71191 1.42334 1.59521 1.50928 1.50928ZM9.49069 1.50928C9.57661 1.59521 9.62488 1.71191 9.62488 1.8335C9.62488 1.95508 9.57661 2.07178 9.49069 2.15771L8.80319 2.84521C8.76091 2.88867 8.71033 2.92383 8.65442 2.94775C8.5985 2.97168 8.53836 2.98438 8.47749 2.98486C8.41664 2.98535 8.35629 2.97363 8.29996 2.95068C8.24364 2.92773 8.19246 2.89355 8.14943 2.85059C8.10638 2.80762 8.07236 2.75635 8.04932 2.7002C8.02626 2.64404 8.01466 2.5835 8.0152 2.52246C8.01573 2.46191 8.02837 2.40186 8.0524 2.3457C8.07642 2.29004 8.11133 2.23926 8.15511 2.19678L8.84261 1.50928C8.92856 1.42334 9.04512 1.37549 9.16664 1.37549C9.28818 1.37549 9.40474 1.42334 9.49069 1.50928ZM0.458313 5.5C0.458313 5.37842 0.506607 5.26221 0.59256 5.17627C0.678513 5.09033 0.79509 5.04199 0.916641 5.04199L1.37498 5.04199C1.49654 5.04199 1.61311 5.09033 1.69907 5.17627C1.78502 5.26221 1.83331 5.37842 1.83331 5.5C1.83331 5.62158 1.78502 5.73828 1.69907 5.82422C1.61311 5.91016 1.49654 5.9585 1.37498 5.9585L0.916641 5.9585C0.79509 5.9585 0.678513 5.91016 0.59256 5.82422C0.506607 5.73828 0.458313 5.62158 0.458313 5.5ZM9.16664 5.5C9.16664 5.37842 9.21494 5.26221 9.30089 5.17627C9.38684 5.09033 9.50342 5.04199 9.62498 5.04199L10.0833 5.04199C10.2049 5.04199 10.3215 5.09033 10.4074 5.17627C10.4934 5.26221 10.5416 5.37842 10.5416 5.5C10.5416 5.62158 10.4934 5.73828 10.4074 5.82422C10.3215 5.91016 10.2049 5.9585 10.0833 5.9585L9.62498 5.9585C9.50342 5.9585 9.38684 5.91016 9.30089 5.82422C9.21494 5.73828 9.16664 5.62158 9.16664 5.5ZM2.84485 8.15527C2.93079 8.24121 2.97905 8.35791 2.97905 8.47949C2.97905 8.60107 2.93079 8.71729 2.84485 8.80322L2.15735 9.49072C2.07091 9.57422 1.95514 9.62061 1.83496 9.61963C1.71478 9.61865 1.59984 9.57031 1.51486 9.48535C1.42987 9.40039 1.38167 9.28516 1.38063 9.16504C1.37958 9.04492 1.42578 8.9292 1.50928 8.84277L2.19678 8.15527C2.28271 8.06934 2.39928 8.021 2.52081 8.021C2.64235 8.021 2.75891 8.06934 2.84485 8.15527ZM8.15511 8.15527C8.24106 8.06934 8.35762 8.021 8.47914 8.021C8.60068 8.021 8.71724 8.06934 8.80319 8.15527L9.49069 8.84277C9.57417 8.9292 9.62038 9.04492 9.61932 9.16504C9.61829 9.28516 9.57008 9.40039 9.48511 9.48535C9.40013 9.57031 9.28517 9.61865 9.16499 9.61963C9.04483 9.62061 8.92905 9.57422 8.84261 9.49072L8.15511 8.80322C8.06918 8.71729 8.0209 8.60107 8.0209 8.47949C8.0209 8.35791 8.06918 8.24121 8.15511 8.15527ZM5.49998 9.16699C5.62154 9.16699 5.73811 9.21533 5.82407 9.30127C5.91002 9.38721 5.95831 9.50342 5.95831 9.625L5.95831 10.0835C5.95831 10.2051 5.91002 10.3218 5.82407 10.4077C5.73811 10.4937 5.62154 10.542 5.49998 10.542C5.37842 10.542 5.26184 10.4937 5.17589 10.4077C5.08994 10.3218 5.04164 10.2051 5.04164 10.0835L5.04164 9.625C5.04164 9.50342 5.08994 9.38721 5.17589 9.30127C5.26184 9.21533 5.37842 9.16699 5.49998 9.16699Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </button>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <section class="hero none">
+      <section class="hero 1none">
         <div class="container">
           <div class="hero__row">
             <ul class="hero__list">
@@ -144,18 +262,22 @@
               <li class="hero__item">3d</li>
             </ul>
             <div class="hero__title">
-              <h1 class="title1 title1_hero">
-                Творческие решения <span>сложных</span> задач
+              <h1 id="titleHero" class="title1 title1_hero">
+                Творческие решения сложных задач
               </h1>
             </div>
             <form class="hero__form">
               <input type="tel" placeholder="+7 --- --- -- -- " />
               <button>Рассчитать стоимость</button>
             </form>
+            <form class="hero__form_mobile">
+              <input type="tel" placeholder="+7 --- --- -- -- " />
+              <button>Рассчитать стоимость</button>
+            </form>
           </div>
         </div>
       </section>
-      <section class="works none">
+      <section class="works 1none">
         <div class="container">
           <div class="works__grid">
             <div class="works__card works__card_purple">
@@ -224,8 +346,8 @@
           </div>
         </div>
       </section>
-      <section class="benefits none">
-        <div class="container">
+      <section class="benefits 1none">
+        <div class="container container_benefits">
           <div class="benefits__info">
             <div class="benefits__title">
               <h2 class="title2 title2_benefits">
@@ -264,7 +386,7 @@
           </div>
         </div>
       </section>
-      <section class="type none">
+      <section class="type 1none">
         <div class="container">
           <div class="type__row">
             <div class="type__elem type__elem_white">
@@ -305,7 +427,7 @@
           </div>
         </div>
       </section>
-      <section class="comments none">
+      <section class="comments 1none">
         <div class="container">
           <div class="comments__title">
             <h3 class="title3 title3_comments">ОТЗЫВЫ</h3>
@@ -425,17 +547,21 @@
                 свою команду мощными знаниями и ценным опытом.
               </p>
             </div>
-            <img src="/content/main/info/sign.svg" alt="sign" />
+            <div class="info__wrapper_image-sign">
+              <img src="/content/main/info/sign.svg" alt="sign" />
+            </div>
           </div>
         </div>
-        <img
-          class="info__image-person"
-          src="/content/main/info/person.png"
-          alt="person"
-        />
+        <div class="info__wrapper_image">
+          <img
+            class="info__image-person"
+            src="/content/main/info/person.png"
+            alt="person"
+          />
+        </div>
       </section>
     </main>
-    <footer class="footer none">
+    <footer class="footer 1none">
       <div class="container">
         <div class="footer__row">
           <div class="footer__logotype">
@@ -459,6 +585,21 @@
             <li class="footer__social"><a href="#!">Behance</a></li>
             <li class="footer__social"><a href="#!">Dribbble</a></li>
             <li class="footer__social"><a href="#!">Instagram</a></li>
+            <li class="footer__social_icon">
+              <img src="/content/footer/behanceIcon.svg" alt="behanceIcon" />
+            </li>
+            <li class="footer__social_icon">
+              <img src="/content/footer/dribbleIcon.svg" alt="dribbleIcon" />
+            </li>
+            <li class="footer__social_icon">
+              <img src="/content/footer/emailIcon.svg" alt="emailIcon" />
+            </li>
+            <li class="footer__social_icon">
+              <img
+                src="/content/footer/instagramIcon.svg"
+                alt="instagramIcon"
+              />
+            </li>
           </ul>
           <span class="footer__span">YUDAEV BRANDING</span>
         </div>

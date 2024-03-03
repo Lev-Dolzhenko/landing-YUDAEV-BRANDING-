@@ -17,6 +17,28 @@ a {
   overflow-x: hidden;
 }
 
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay-show {
+  animation: overlay 0.3s linear forwards;
+}
+
+.overlay-showRev {
+  animation: overlayReverse 0.3s linear forwards;
+}
+
+
 .container {
   max-width: 1380px;
   padding: 0 30px;
@@ -28,7 +50,7 @@ a {
 }
 
 .title1 {
-  font-size: 96px;
+  font-size: clamp(40px, 1.227rem + 6.36vw, 96px);
   font-weight: 400;
   line-height: 80%;
   text-align: center;
@@ -66,7 +88,7 @@ a {
 
   &_info {
     color: rgb(170, 213, 84);
-    font-size: 144px;
+    font-size: clamp(34px, -0.375rem + 12.5vw, 144px);
     font-weight: 700;
     font-style: italic;
     line-height: 80%;
@@ -96,7 +118,7 @@ a {
   &_benefits {
     color: rgb(255, 255, 255);
     font-style: italic;
-    font-size: clamp(14px, 0.784rem + 0.45vw, 18px);
+    font-size: clamp(12px, 0.614rem + 0.68vw, 18px);
     font-weight: 400;
     line-height: 154%;
     text-align: center;
@@ -105,7 +127,7 @@ a {
   &_info {
     color: rgb(74, 74, 74);
     font-style: italic;
-    font-size: 18px;
+    font-size: clamp(12px, 0.614rem + 0.68vw, 18px);
     font-weight: 400;
     line-height: 154%;
   }

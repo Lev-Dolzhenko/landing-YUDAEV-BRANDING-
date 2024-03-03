@@ -1,7 +1,7 @@
 .hero {
   margin-top: 50px;
 
-  margin-bottom: 310px;
+  margin-bottom: clamp(250px, 14.261rem + 6.82vw, 310px);
 }
 
 .hero__row {
@@ -18,7 +18,7 @@
 
 .hero__item {
   color: $colorWhite;
-  font-size: 24px;
+  font-size: clamp(14px, 0.648rem + 1.14vw, 24px);
   font-weight: 400;
   line-height: 80%;
   text-align: center;
@@ -57,6 +57,78 @@
 
   button {
     padding: 27px 34px;
+
+    border-radius: 30px;
+    background: linear-gradient(
+      202.78deg,
+      rgb(169, 209, 55) 43.952%,
+      rgb(67, 209, 55) 92.622%
+    );
+
+    color: $colorBlack;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 80%;
+
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.hero__title {
+  overflow: hidden;
+}
+
+
+.char {
+  transform: translateY(170px);
+  transition: transform 0.5s;
+}
+
+.hero__form_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .hero__form {
+    display: none;
+  }
+  .hero__form_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+
+    margin-top: 50px;
+
+    input {
+      padding: 20px 20px;
+
+      color: $colorWhite;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 80%;
+
+      width: 100%;
+
+      border-radius: 30px;
+      background: $colorDarkBgFormHeader;
+
+      &::placeholder {
+        font-family: $mulish;
+        color: $colorWhite;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 80%;
+      }
+    }
+  }
+  button {
+    padding: 27px clamp(20px, 0.932rem + 1.59vw, 34px);
 
     border-radius: 30px;
     background: linear-gradient(

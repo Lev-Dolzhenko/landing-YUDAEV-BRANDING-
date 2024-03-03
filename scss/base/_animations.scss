@@ -6,3 +6,51 @@
     transform: translateY(0%);
   }
 }
+
+@keyframes navMobile {
+  from {
+    top: 30%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    top: 20%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes navMobileReverse {
+  from {
+    top: 20%;
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    top: 30%;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes overlay {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes overlayReverse {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

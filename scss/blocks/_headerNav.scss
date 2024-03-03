@@ -61,3 +61,37 @@
     border: 1px solid $colorAccent;
   }
 }
+
+.menu-icon {
+  display: none !important;
+}
+
+@include mediaTablet {
+  .menu-icon {
+    display: inline-flex !important;
+  }
+
+  .header__item_buttons {
+    display: none;
+  }
+
+  .header__item_text {
+    display: none;
+  }
+
+  .header__item_title {
+    width: 120px;
+  }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@include mediaPhone {
+  .header__item_logotype {
+    display: none;
+  }
+}

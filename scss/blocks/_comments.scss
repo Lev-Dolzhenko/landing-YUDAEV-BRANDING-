@@ -1,5 +1,5 @@
 .comments {
-  padding: 130px 0 250px;
+  padding: 130px 0 clamp(100px, 2.841rem + 17.05vw, 250px);
 }
 
 .comments__image-dark,
