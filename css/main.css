@@ -1,6 +1,6 @@
 /* BASE */
-@import '/fonts/drukWide/style.css';
-@import '/fonts/TTTravels/stylesheet.css';
+@import 'fonts/drukWide/style.css';
+@import 'fonts/TTTravels/stylesheet.css';
 @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @-webkit-keyframes comment {
   from {
@@ -1002,7 +1002,7 @@ body.dark-theme .footer__span {
   background: rgb(229, 225, 243);
 }
 .works__card_green {
-  background-image: url(content/main/works/greenCard/greenBg.jpeg);
+  background-image: url(..content/main/works/greenCard/greenBg.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1011,7 +1011,7 @@ body.dark-theme .footer__span {
   background-color: #c1bab0;
 }
 .works__card_white {
-  background-image: url(content/main/works/whiteCard/whiteBg.jpeg);
+  background-image: url(..content/main/works/whiteCard/whiteBg.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
