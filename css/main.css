@@ -1002,7 +1002,7 @@ body.dark-theme .footer__span {
   background: rgb(229, 225, 243);
 }
 .works__card_green {
-  background-image: url(..content/main/works/greenCard/greenBg.jpeg);
+  background-image: url(content/main/works/greenCard/greenBg.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
