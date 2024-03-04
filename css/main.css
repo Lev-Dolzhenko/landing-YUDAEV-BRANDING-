@@ -492,6 +492,7 @@ body.dark-theme .footer__span {
   position: absolute;
   left: 5%;
   right: 5%;
+  z-index: 100;
 }
 
 .header__list {
