@@ -936,7 +936,6 @@ body.dark-theme .footer__span {
     line-height: 80%;
   }
   button {
-    padding: 27px clamp(20px, 0.932rem + 1.59vw, 34px);
     border-radius: 30px;
     background: linear-gradient(202.78deg, rgb(169, 209, 55) 43.952%, rgb(67, 209, 55) 92.622%);
     color: #000;
