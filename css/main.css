@@ -1285,7 +1285,7 @@ body.dark-theme .footer__span {
 
 .type__elem_white {
   height: 900px;
-  background-image: url(../content/main/type/bg-white.jpeg);
+  background-image: url(/content/main/type/bg-white.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
