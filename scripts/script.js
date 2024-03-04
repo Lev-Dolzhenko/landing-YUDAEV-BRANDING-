@@ -105,8 +105,14 @@ tl.fromTo(
   {
     y: 100,
     opacity: 0,
+    zIndex: 1000,
   },
-  { y: 0, opacity: 1, duration: 0.8 }
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    zIndex: 1000,
+  }
 )
   .fromTo(
     ".hero__item",
@@ -143,6 +149,15 @@ tl.fromTo(
     {
       y: 0,
       opacity: 1,
+    }
+  )
+  .fromTo(
+    ".menu-header__item_burger",
+    {
+      zIndex: 50,
+    },
+    {
+      zIndex: 50,
     }
   );
 
@@ -370,7 +385,6 @@ gsap.fromTo(
   }
 );
 
-
 gsap.fromTo(
   ".info__title",
   {
@@ -442,4 +456,3 @@ gsap.fromTo(
     },
   }
 );
-
